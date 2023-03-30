@@ -1,0 +1,12 @@
+<div class="item">
+    <mat-slide-toggle>Toggle me!</mat-slide-toggle>
+    <h2>Издатель: {{book.publisher}}</h2>
+    <p>Автор: {{book.author}}</p>
+    <p>Жанр: {{book.genre}}</p>
+    <button 
+    mat-raised-button
+    (click)="isVisible = !isVisible">
+        {{isVisible? 'hide':'Show'}}
+</button>
+    <img *ngIf="isVisible" [src]="book.image" [alt]="book.author">
+</div>
